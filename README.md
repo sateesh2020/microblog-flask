@@ -8,22 +8,8 @@
 
 ## Database Migrations
 
-### Users
-
 ```sh
-    flask db migrate -m "users table"
-```
-
-And the migration needs to be applied to the database:
-
-```sh
-    flask db upgrade
-```
-
-### Posts
-
-```sh
-    flask db migrate -m "posts table"
+    flask db migrate -m "database migration"
 ```
 
 And the migration needs to be applied to the database:
