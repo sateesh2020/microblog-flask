@@ -111,7 +111,10 @@ def edit_profile():
 def index():
     form = PostForm()
     if form.validate_on_submit():
-        post = Post(body=form.post.data, author=current_user)
+        # Not implemeted language translation
+        language = ''
+        post = Post(body=form.post.data,
+                    author=current_user, language=language)
         db.session.add(post)
         db.session.commit()
         flash(_('Your post is live now'))
