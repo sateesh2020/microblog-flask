@@ -7,19 +7,22 @@ from flask_login import LoginManager
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 from flask_bootstrap import Bootstrap
+from flask_moment import Moment
 import os
 
 app = Flask(__name__)
 
-bootstrap = Bootstrap(app)
+
 app.config.from_object(Config)
+
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-
-login = LoginManager(app)
-login.login_view = 'login'
-
 mail = Mail(app)
+login = LoginManager(app)
+bootstrap = Bootstrap(app)
+moment = Moment(app)
+
+login.login_view = 'login'
 
 if not app.debug:
     if app.config['MAIL_SERVER']:

@@ -1,9 +1,9 @@
 <div class="row">
   <div class="col-md-1 col-sm-3">
-    <img class="img-fluid" src="{{ post.author.avatar(36) }}" />
+    <img src="{{ post.author.avatar(64) }}" />
   </div>
   <div class="col-md-11 col-sm-9">
-    <span class="font-capitalize">{{ post.author.username }}</span> says:
-    <b>{{ post.body }}</b>
+    <h4 class="font-capitalize">{{ post.author.username }} &nbsp; says:</h4>
+    <p>{{ post.body }}</p>
   </div>
 </div>
