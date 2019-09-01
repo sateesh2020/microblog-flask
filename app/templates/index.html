@@ -1,6 +1,6 @@
 {% extends "base.html"%} {% block app_content %}
 <div class="container">
-  <h1>Hi, {{ current_user.username }}!</h1>
+  <h1>{{ _('Hi, %(username)s!', username=current_user.username) }}</h1>
   {% if form %}
   <form action="" class="form" method="post">
     {{ form.hidden_tag() }}
@@ -26,12 +26,12 @@
   <div class="row justify-content-between" style="padding: 25px">
     <div class="col-3 text-left">
       {% if prev_url %}
-      <a class="btn btn-info" href="{{ next_url }}">Older posts</a>
+      <a class="btn btn-info" href="{{ next_url }}">{{ _("Older posts") }}</a>
       {% endif %}
     </div>
     <div class="col-3 text-right">
       {% if next_url %}
-      <a class="btn btn-info" href="{{ prev_url }}">Newer posts</a>
+      <a class="btn btn-info" href="{{ prev_url }}">{{ _("Newer posts") }}</a>
       {% endif %}
     </div>
   </div>

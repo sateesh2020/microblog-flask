@@ -1,6 +1,8 @@
-{% extends 'bootstrap/base.html' %} {% block title %} {% if title %}{{ title }}
-- Superblog{% else %}Welcome to Superblog{% endif %} {% endblock %} {% block
-navbar %}
+{% extends 'bootstrap/base.html' %} {% block title %} {% if title %}{{
+  title
+}}
+- Superblog{% else %}{{ _("Welcome to Superblog") }}{% endif %} {% endblock %}
+{% block navbar %}
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
@@ -58,4 +60,5 @@ navbar %}
 {% endblock %} {% block scripts %}
 {{ super() }}
 {{ moment.include_moment() }}
+{{ moment.lang(g.locale) }}
 {% endblock %}

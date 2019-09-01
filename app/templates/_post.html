@@ -1,9 +1,17 @@
 <div class="row">
-  <div class="col-md-1 col-sm-3">
+  <div class="col-xs-4 col-sm-3 col-md-1">
     <img src="{{ post.author.avatar(64) }}" />
   </div>
-  <div class="col-md-11 col-sm-9">
-    <h4 class="font-capitalize">{{ post.author.username }} &nbsp; says:</h4>
+  <div class="col-xs-8 col-sm-9 col-md-11">
+    {% set user_link %}
+    <a href="{{ url_for('user', username=post.author.username) }}">
+      {{ post.author.username }}
+    </a>
+    {% endset %}
+    <h4>
+      {{ _('%(username)s said %(when)s',
+        username=user_link, when=moment(post.timestamp).fromNow()) }}
+    </h4>
     <p>{{ post.body }}</p>
   </div>
 </div>
