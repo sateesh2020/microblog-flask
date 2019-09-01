@@ -178,16 +178,16 @@ msgstr "Perfil"
 msgid "Logout"
 msgstr "Salir"
 
-#: app/templates/index.html:5
+#: app/templates/main/index.html:5
 #, python-format
 msgid "Hi, %(username)s!"
 msgstr "¡Hola, %(username)s!"
 
-#: app/templates/index.html:17 app/templates/user.html:31
+#: app/templates/main/index.html:17 app/templates/user.html:31
 msgid "Newer posts"
 msgstr "Artículos siguientes"
 
-#: app/templates/index.html:22 app/templates/user.html:36
+#: app/templates/main/index.html:22 app/templates/user.html:36
 msgid "Older posts"
 msgstr "Artículos previos"
 

@@ -1,4 +1,4 @@
-# microblog-flask
+# superblog-flask
 
 ## Initializing Database
 

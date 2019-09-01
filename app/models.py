@@ -5,7 +5,7 @@ from flask_login import UserMixin
 from hashlib import md5
 import jwt
 
-from app import app, db, login
+from app import db, login
 
 
 followers = db.Table(
