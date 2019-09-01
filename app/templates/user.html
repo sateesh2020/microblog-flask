@@ -30,11 +30,22 @@
       <ul class="list-group list-group-flush">
         {% for post in posts %}
         <li class="list-group-item">
-          <span class="font-capitalize">{{ post.author.username }}</span> says:
-          <b>{{ post.body }}</b>
+          {% include '_post.html' %}
         </li>
         {% endfor %}
       </ul>
+      <div class="row justify-content-between" style="padding: 25px">
+        <div class="col-3 text-left">
+          {% if prev_url %}
+          <a class="btn btn-info" href="{{ next_url }}">Older posts</a>
+          {% endif %}
+        </div>
+        <div class="col-3 text-right">
+          {% if next_url %}
+          <a class="btn btn-info" href="{{ prev_url }}">Newer posts</a>
+          {% endif %}
+        </div>
+      </div>
     </div>
   </div>
 </div>

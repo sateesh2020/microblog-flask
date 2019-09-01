@@ -30,6 +30,9 @@
           href="{{ url_for('user', username=current_user.username) }}"
           >Profile</a
         >
+        <a href="{{ url_for('explore') }}" class="p-2 text-dark">
+          Explore
+        </a>
         <a class="p-2 text-dark" href="{{ url_for('logout') }}">Logout</a>
         {% endif %}
       </nav>
